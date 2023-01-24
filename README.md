@@ -69,32 +69,32 @@ RegisterNumber:22009001.
 UP COUNTER:-
 
 
-module uc(input clk,input reset,output[0:3]counter);
-reg[0:3] counter_up;
-always@(posedge clk or posedge reset)
-begin
-if(reset)
-counter_up<=4'd0;
+module uc(input clk,input reset,output[0:3]counter);     
+reg[0:3] counter_up;      
+always@(posedge clk or posedge reset)     
+begin    
+if(reset)    
+counter_up<=4'd0;     
 else
-counter_up<=counter_up+4'd1;
-end
-assign counter=counter_up;
-endmodule
+counter_up<=counter_up+4'd1;      
+end     
+assign counter=counter_up;     
+endmodule      
 
 
-DOWN COUNTER:-
+DOWN COUNTER:-    
 
-module dc(input clk,input reset,output[0:3]counter);
-reg[0:3] counter_down;
-always@(posedge clk or posedge reset)
-begin
-if(reset)
-counter_down<=4'd0;
-else
-counter_down<=counter_down-4'd1;
-end
-assign counter=counter_down;
-endmodule
+module dc(input clk,input reset,output[0:3]counter);     
+reg[0:3] counter_down;    
+always@(posedge clk or posedge reset)     
+begin       
+if(reset)     
+counter_down<=4'd0;      
+else     
+counter_down<=counter_down-4'd1;     
+end     
+assign counter=counter_down;     
+endmodule       
 
 
 
@@ -105,7 +105,6 @@ endmodule
 
 ![image](https://user-images.githubusercontent.com/118350045/214300408-2c9379af-9c10-4e1e-9b7f-0ef6f6b37e37.png)
 
-
 ![image](https://user-images.githubusercontent.com/118350045/214300715-ef20350e-70aa-459a-b749-c66b6e839993.png)
 
 
@@ -114,7 +113,7 @@ endmodule
 
 
 
-### TIMING DIGRAMS FOR COUNTER  
+### TIMING DIGRAMS FOR COUNTER      
 ![image](https://user-images.githubusercontent.com/118350045/214300946-3610a372-4d0b-43fd-9217-23b38b41ce1f.png)
 
 ![image](https://user-images.githubusercontent.com/118350045/214301220-fbc20e26-4e0f-44de-b72a-84451c6ec3ed.png)
